@@ -11,7 +11,7 @@
 - Member 3: Neeraja S - Saintgits College of Engineering
 
 ### Hosted Project Link
-[mention your project hosted project link here]
+https://shalin-01.github.io/MaMa-Mentor
 
 ### Project Description
 MaMa Mentor is a web application that supports new and expecting mothers by providing tips on nutrition, exercise, and trimester tracking. It includes an interactive calendar for marking important dates and offers tailored guidance for a healthy pregnancy journey.
@@ -48,53 +48,65 @@ npm
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-Add caption explaining what this shows
+<img width="959" alt="LoginPage" src="https://github.com/user-attachments/assets/202aacae-a54e-443f-94db-f384e6367640" />
+login page
 
-![Screenshot2](Add screenshot 2 here with proper name)
-Add caption explaining what this shows
 
-![Screenshot3](Add screenshot 3 here with proper name)
-Add caption explaining what this shows
+<img width="959" alt="OptionsPage" src="https://github.com/user-attachments/assets/01caef6d-959f-494e-b2d0-9802082d8283" />
+options page
+
+
+<img width="959" alt="ChecklistPage" src="https://github.com/user-attachments/assets/873da398-acb8-40bb-8b65-1dfa6567aa75" />
+checklist page
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-Add caption explaining your workflow
+![WhatsApp Image 2025-01-26 at 11 03 34](https://github.com/user-attachments/assets/6d350623-2b4d-4523-ab23-d8db054e558d)
+
+workflow of MaMa Mentor
 
 For Hardware:
 
 # Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-Add caption explaining connections
+nil
 
-![Schematic](Add your schematic diagram here)
-Add caption explaining the schematic
+nil
 
 # Build Photos
-![Team](Add photo of your team here)
+![WhatsApp Image 2025-01-26 at 11 30 48](https://github.com/user-attachments/assets/3dfaa37f-21bd-40f0-a688-e52d27fcbc18)
 
 
-![Components](Add photo of your components here)
+
+nil
 List out all components shown
 
-![Build](Add photos of build process here)
+nil
 Explain the build steps
+
+1.Set Up the Frontend Framework
+2.Install Dependencies
+3.Organize Frontend Files
+4.Design HTML Templates
+5.Add CSS for Styling
+6.Add JavaScript for Interactivity
+7.Test and Optimize
 
 ![Final](Add photo of final product here)
 Explain the final build
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-Explain what the video demonstrates
+
+
+
+The demo shows the working of MaMa Mentor
 
 # Additional Demos
-[Add any extra demo materials/links]
+https://shalin-01.github.io/MaMa-Mentor
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Neeraja S: Index page, Login Page
+- Shalin Ann Thomas: Checklist Page, Excercise Reccomendation Page
+- Varsha S Panicker: Options Page, Trimester Calculator Page
 
 ---
 Made with ❤️ at TinkerHub
