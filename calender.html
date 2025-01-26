@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Appointment Calendar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #f0e5d8, #ffb6b9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .calendar-container {
+            width: 90%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border: 4px solid #5a2a83;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .calendar-header button {
+            background: linear-gradient(45deg, #ff9800, #ff5722);
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .calendar-header button:hover {
+            background: linear-gradient(45deg, #ff5722, #ff9800);
+            transform: scale(1.05);
+        }
+
+        .calendar-header h2 {
+            font-size: 28px;
+            color: #5a2a83;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .calendar-title {
+            font-size: 32px;
+            color: #5a2a83;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
+
+        .day-name {
+            font-weight: bold;
+            color: #4caf50;
+            text-transform: uppercase;
+            font-size: 15px;
+            text-shadow: 1px 1px 2px #ffffff;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .day {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            background-color: #f8bbd0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .day:hover {
+            transform: scale(1.1);
+            background-color: #ffcdd2;
+        }
+
+        .day.marked {
+            background: linear-gradient(45deg, #8e24aa, #d81b60);
+            color: #fff;
+            font-size: 20px;
+            text-shadow: 1px 1px 2px #000;
+            transform: scale(1.1);
+        }
+
+        .day.inactive {
+            color: #ccc;
+            background-color: #eeeeee;
+            cursor: default;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar-title">Appointment Calendar</div>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prev-month">&lt; Prev</button>
+            <h2 id="current-month-year"></h2>
+            <button id="next-month">Next &gt;</button>
+        </div>
+        <div class="calendar">
+            <!-- Days will be dynamically generated here -->
+        </div>
+    </div>
+
+    <script>
+        const calendar = document.querySelector('.calendar');
+        const currentMonthYear = document.getElementById('current-month-year');
+        const prevMonthBtn = document.getElementById('prev-month');
+        const nextMonthBtn = document.getElementById('next-month');
+
+        const today = new Date();
+        let currentMonth = today.getMonth();
+        let currentYear = today.getFullYear();
+
+        const markedDates = new Set();
+
+        function renderCalendar(month, year) {
+            calendar.innerHTML = '';
+            currentMonthYear.textContent = `${new Date(year, month).toLocaleString('default', { month: 'long' })} ${year}`;
+
+            // Days of the week
+            const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            dayNames.forEach(day => {
+                const dayNameElem = document.createElement('div');
+                dayNameElem.classList.add('day-name');
+                dayNameElem.textContent = day;
+                calendar.appendChild(dayNameElem);
+            });
+
+            // First day of the month
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            // Generate empty slots for days before the first day of the month
+            for (let i = 0; i < firstDay; i++) {
+                const emptySlot = document.createElement('div');
+                emptySlot.classList.add('day', 'inactive');
+                calendar.appendChild(emptySlot);
+            }
+
+            // Generate days of the month
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElem = document.createElement('div');
+                dayElem.classList.add('day');
+                dayElem.textContent = day;
+
+                const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                if (markedDates.has(dateString)) {
+                    dayElem.classList.add('marked');
+                }
+
+                dayElem.addEventListener('click', () => toggleMarkedDate(dayElem, dateString));
+
+                calendar.appendChild(dayElem);
+            }
+        }
+
+        function toggleMarkedDate(dayElem, dateString) {
+            if (markedDates.has(dateString)) {
+                markedDates.delete(dateString);
+                dayElem.classList.remove('marked');
+            } else {
+                markedDates.add(dateString);
+                dayElem.classList.add('marked');
+            }
+        }
+
+        function changeMonth(offset) {
+            currentMonth += offset;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            } else if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            renderCalendar(currentMonth, currentYear);
+        }
+
+        prevMonthBtn.addEventListener('click', () => changeMonth(-1));
+        nextMonthBtn.addEventListener('click', () => changeMonth(1));
+
+        renderCalendar(currentMonth, currentYear);
+    </script>
+</body>
+</html>

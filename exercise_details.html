@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Details - MaMa Mentor</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'PT Serif', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0f7fa, #e1bee7); /* Soft gradient background */
+            color: #333;
+            text-align: center;
+            overflow-y: auto; /* Allow vertical scrolling */
+            min-height: 100vh; /* Ensure body height matches viewport height */
+        }
+
+        /* Details container for layout */
+        .details-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Light transparent background */
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto; /* Center the container and add top/bottom spacing */
+        }
+
+        h1 {
+            font-family: 'PT Serif', serif;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: #e91e63;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        ul {
+            text-align: left;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive styling for mobile */
+        @media (max-width: 768px) {
+            .details-container {
+                width: 90%;
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="details-container" id="exerciseDetails">
+        <h1 id="exerciseTitle"></h1>
+        <p id="exerciseWhy"></p>
+        <p id="exerciseHow"></p>
+        <h3>Things to Keep in Mind:</h3>
+        <ul>
+            <li>Avoid exercises that involve lying flat on your back after the first trimester (this can reduce blood flow to your uterus).</li>
+            <li>Avoid high-impact exercises, contact sports, or activities with a risk of falling.</li>
+            <li>Listen to your body; if you feel any discomfort, stop and consult your healthcare provider.</li>
+            <li>Stay hydrated and don’t overexert yourself.</li>
+        </ul>
+    </div>
+
+    <script>
+        // Function to get the query parameter value from the URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Exercise details array
+        const exercises = [
+            {
+                title: "Walking",
+                why: "Low-impact and easy to do, walking is a great cardio exercise to keep you active without putting too much stress on your joints.",
+                how: "Start with a comfortable pace, aiming for 20–30 minutes a day, 3–5 times a week."
+            },
+            {
+                title: "Prenatal Yoga",
+                why: "Yoga helps with flexibility, stress reduction, and relaxation. It also focuses on deep breathing, which can help during labor.",
+                how: "Look for prenatal yoga classes or online videos tailored to pregnancy. Poses like Cat-Cow, Child’s Pose, and Warrior Pose are often recommended."
+            },
+            {
+                title: "Swimming",
+                why: "The buoyancy of water supports your body, reducing strain on your joints and relieving back pain. Swimming also works your whole body.",
+                how: "Swim at a moderate pace for 20–30 minutes, or try water aerobics classes designed for pregnant women."
+            },
+            {
+                title: "Pelvic Floor Exercises (Kegels)",
+                why: "Strengthening your pelvic floor muscles helps improve bladder control and prepares you for labor.",
+                how: "Contract the muscles you would use to stop urination, hold for a few seconds, and then relax. Repeat 10–15 times, a few times a day."
+            },
+            {
+                title: "Squats",
+                why: "Squats help strengthen the legs, glutes, and pelvic floor muscles. This is useful for labor preparation.",
+                how: "Stand with your feet shoulder-width apart, slowly bend your knees, lowering your body as if you're going to sit in a chair, then return to standing. Keep your back straight and knees behind your toes."
+            },
+            {
+                title: "Standing Calf Raises",
+                why: "Helps improve circulation in your legs and can reduce swelling and varicose veins.",
+                how: "Stand with your feet hip-width apart, slowly rise onto your toes, hold for a few seconds, and then lower back down. Repeat 10–15 times."
+            },
+            {
+                title: "Modified Push-Ups",
+                why: "Strengthens your arms, chest, and shoulders.",
+                how: "Perform push-ups against a wall or on your knees to reduce intensity. Ensure your body is in a straight line from your head to your knees or feet."
+            },
+            {
+                title: "Gentle Pilates",
+                why: "Pilates improves posture, strengthens your core, and helps with flexibility.",
+                how: "Look for prenatal Pilates classes or online routines. Focus on exercises that do not require you to lie flat on your back after the first trimester."
+            },
+            {
+                title: "Side-Lying Leg Lifts",
+                why: "Strengthens the hips, glutes, and thighs.",
+                how: "Lie on your side with your head supported by a pillow. Slowly lift the top leg, hold for a few seconds, and lower it back down. Repeat 10–15 times on each side."
+            },
+            {
+                title: "Stationary Cycling",
+                why: "A safe cardio workout that gets your heart rate up without putting strain on your joints.",
+                how: "Use a stationary bike at a moderate pace for 20–30 minutes, 3–4 times a week."
+            }
+        ];
+
+        // Get the exercise ID from the URL and display the details
+        const exerciseId = getQueryParam("exerciseId");
+        if (exerciseId) {
+            const exercise = exercises[exerciseId - 1]; // Array is 0-based, so subtract 1
+            document.getElementById("exerciseTitle").textContent = exercise.title;
+            document.getElementById("exerciseWhy").textContent = "Why it’s good: " + exercise.why;
+            document.getElementById("exerciseHow").textContent = "How to do it: " + exercise.how;
+        } else {
+            document.getElementById("exerciseTitle").textContent = "Exercise not found";
+        }
+    </script>
+</body>
+</html>

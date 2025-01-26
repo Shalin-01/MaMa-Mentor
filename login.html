@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MaMaMentor</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        /* Slide-in animation */
+        body {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Flash message animation */
+        #flash-messages li {
+            animation: fadeInOut 4s ease-in-out;
+        }
+
+        @keyframes fadeInOut {
+            0%, 90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Login to MaMaMentor</h1>
+    </header>
+
+    <section class="login-section">
+        <h2>Log In to Your Account</h2>
+        <ul id="flash-messages"></ul>
+
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="btn-grad">Login</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MaMaMentor. All rights reserved.</p>
+        <p>Need help? Contact support@mama-mentor.com</p>
+    </footer>
+
+    <script>
+        // Handle form submission
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+            
+            if (email) {
+                // Show flash message
+                document.getElementById("flash-messages").innerHTML = `
+                    <li>Login successful! Redirecting...</li>
+                `;
+
+                // Redirect after 2 seconds
+                setTimeout(() => {
+                    window.location.href = "options.html";
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>

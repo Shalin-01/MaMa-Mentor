@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Recommendations - MaMa Mentor</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'PT Serif', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #a0c4ff, #ffb6c1); /* Blue-pink gradient background */
+            color: #333;
+            text-align: center;
+            overflow-y: auto; /* Allow vertical scrolling */
+            min-height: 100vh; /* Ensure body height matches viewport height */
+        }
+
+        /* Tips container for layout */
+        .exercise-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Light transparent background */
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto; /* Center the container and add top/bottom spacing */
+        }
+
+        h1 {
+            font-family: 'PT Serif', serif;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: #5a2a83; /* Purple color for heading */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Style for each link */
+        .exercise-container a {
+            display: block;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333; /* Black color for content text */
+            margin: 12px 0;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #ffe4e1; /* Very light pink */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect for links */
+        .exercise-container a:hover {
+            background-color: #ffd1d1; /* Slightly darker light pink */
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Active effect for links */
+        .exercise-container a:active {
+            transform: translateY(0);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Keyframe animation for fading in */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive styling for mobile */
+        @media (max-width: 768px) {
+            .exercise-container {
+                width: 90%;
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .exercise-container a {
+                font-size: 1.1rem;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="exercise-container">
+        <h1>Exercise Recommendations</h1>
+        <a href="exercise_details.html?exerciseId=1">Walking</a>
+        <a href="exercise_details.html?exerciseId=2">Prenatal Yoga</a>
+        <a href="exercise_details.html?exerciseId=3">Swimming</a>
+        <a href="exercise_details.html?exerciseId=4">Pelvic Floor Exercises (Kegels)</a>
+        <a href="exercise_details.html?exerciseId=5">Squats</a>
+        <a href="exercise_details.html?exerciseId=6">Standing Calf Raises</a>
+        <a href="exercise_details.html?exerciseId=7">Modified Push-Ups</a>
+        <a href="exercise_details.html?exerciseId=8">Gentle Pilates</a>
+        <a href="exercise_details.html?exerciseId=9">Side-Lying Leg Lifts</a>
+        <a href="exercise_details.html?exerciseId=10">Stationary Cycling</a>
+    </div>
+</body>
+</html>

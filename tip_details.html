@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Details - MaMa Mentor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=PT+Serif:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'PT Serif', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f8d9e6, #ffd3f2); /* Lighter pink gradient */
+            color: #000; /* Black text */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .tip-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Light transparent background */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #000; /* Black text */
+            font-weight: normal; /* Lighter font weight */
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        ul {
+            text-align: left;
+            font-size: 1.2rem;
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ff7f7f; /* Soft pink background for the button */
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #ff5c5c; /* Slightly darker pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="tip-container">
+        <h1 id="tip-title">Tip Title</h1>
+        <div id="tip-description"></div>
+        <a href="baby_tips.html">Back to Tips</a>
+    </div>
+
+    <script>
+        // Tip descriptions data
+        const tipsData = {
+            1: {
+                title: "Breastfeeding Tips",
+                description: [
+                    "Positioning: Find a comfortable position for both you and the baby. Ensure the baby is latched properly to avoid soreness.",
+                    "Hydration: Drink plenty of water to stay hydrated while breastfeeding.",
+                    "Frequent Feeding: Newborns may nurse every 2-3 hours, so be patient and consistent."
+                ]
+            },
+            2: {
+                title: "Sleep Tips for Baby and Mother",
+                description: [
+                    "Establish a Routine: Try to develop a bedtime routine for your baby, such as a warm bath and lullabies.",
+                    "Safe Sleeping: Always place the baby on their back to sleep, on a firm mattress with no pillows, blankets, or stuffed animals.",
+                    "Sleep When Baby Sleeps: Take naps during the day when your baby is sleeping to recover from nighttime wake-ups."
+                ]
+            },
+            3: {
+                title: "Diapering Tips",
+                description: [
+                    "Frequent Changes: Change the baby’s diaper frequently to prevent rashes and discomfort.",
+                    "Gentle Wipes: Use soft wipes or cotton balls with warm water for sensitive skin.",
+                    "Diaper Rash Prevention: Use a good diaper cream to protect against rashes and irritation."
+                ]
+            },
+            4: {
+                title: "Baby’s Health and Hygiene",
+                description: [
+                    "Bathing: Give your baby sponge baths until the umbilical cord stump falls off (usually around 1-2 weeks). Afterward, you can give them a gentle bath in a baby tub.",
+                    "Nail Care: Trim your baby's nails carefully to avoid scratching their face. Use baby nail clippers or a soft emery board.",
+                    "Umbilical Cord Care: Keep the umbilical stump clean and dry until it falls off."
+                ]
+            },
+            5: {
+                title: "Bonding with Your Baby",
+                description: [
+                    "Skin-to-Skin Contact: Hold your baby close with skin-to-skin contact for bonding and comfort.",
+                    "Talk and Sing: Speak and sing to your baby, even if they can't respond. This helps with their emotional development and communication skills."
+                ]
+            },
+            6: {
+                title: "Managing Feeding and Sleep Schedules",
+                description: [
+                    "Responsive Parenting: Respond to your baby’s hunger cues and sleep signals. This helps establish trust and security.",
+                    "Be Flexible: Understand that every baby has their own schedule. Be flexible and patient with their routines."
+                ]
+            },
+            7: {
+                title: "Self-Care for Mom",
+                description: [
+                    "Take Breaks: It's important to rest and recharge. Ask for help when needed, whether from family, friends, or a partner.",
+                    "Healthy Eating: Try to eat nutritious meals that will help you regain energy and maintain milk supply.",
+                    "Mental Health: It’s normal to feel overwhelmed. If you're feeling anxious or sad, reach out to a healthcare provider for support."
+                ]
+            },
+            8: {
+                title: "When to Call the Doctor",
+                description: [
+                    "Fever: If your baby has a temperature over 100.4°F (38°C), call the doctor.",
+                    "Breathing Issues: Seek medical help if your baby is having trouble breathing or is excessively lethargic.",
+                    "Increased Crying: If your baby cries more than usual and you can’t soothe them, it might be a sign of discomfort or an underlying issue."
+                ]
+            },
+            9: {
+                title: "Developmental Milestones",
+                description: [
+                    "Tummy Time: Start tummy time as soon as your baby is able to (a few minutes each day) to strengthen their muscles and promote motor skills.",
+                    "Tracking Movements: By around 2-3 months, your baby will begin following objects with their eyes and turning their head towards sounds."
+                ]
+            },
+            10: {
+                title: "Safety Tips",
+                description: [
+                    "Car Seat Safety: Always use a rear-facing car seat in the backseat of your car until your baby is at least 2 years old.",
+                    "Baby-Proofing: As your baby grows and becomes mobile, ensure that the environment is safe (sharp objects out of reach, plug covers, etc.)."
+                ]
+            }
+        };
+
+        // Get the tipId from the URL query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipId = urlParams.get('tipId');
+
+        // Display the tip data
+        const tipTitle = document.getElementById('tip-title');
+        const tipDescription = document.getElementById('tip-description');
+
+        if (tipsData[tipId]) {
+            tipTitle.textContent = tipsData[tipId].title;
+            const ul = document.createElement('ul');
+            tipsData[tipId].description.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                ul.appendChild(li);
+            });
+            tipDescription.innerHTML = ''; // Clear any previous content
+            tipDescription.appendChild(ul); // Append the list of points
+        } else {
+            tipTitle.textContent = "Tip Not Found";
+            tipDescription.textContent = "The selected tip does not exist. Please go back and choose a valid tip.";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Tips - MaMa Mentor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=PT+Serif:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'PT Serif', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f8d9e6, #ffd3f2); /* Lighter pink gradient */
+            color: #000; /* Black text */
+            text-align: center;
+            overflow-y: auto; /* Allow vertical scrolling */
+            min-height: 100vh; /* Ensure body height matches viewport height */
+        }
+
+        /* Tips container for layout */
+        .tips-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Light transparent background */
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto; /* Center the container and add top/bottom spacing */
+        }
+
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: #000; /* Black color for the heading */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeIn 1s ease-out;
+            font-weight: normal; /* Lighter font weight */
+        }
+
+        /* Style for each link */
+        .tips-container a {
+            display: block;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: normal; /* Lighter font weight */
+            color: #000; /* Black text */
+            margin: 12px 0;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #ffb3cc; /* Soft pink background for links */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect for links */
+        .tips-container a:hover {
+            background-color: #ff99b3;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Active effect for links */
+        .tips-container a:active {
+            transform: translateY(0);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Keyframe animation for fading in */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive styling for mobile */
+        @media (max-width: 768px) {
+            .tips-container {
+                width: 90%;
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tips-container a {
+                font-size: 1.1rem;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tips-container">
+        <h1>Baby Tips</h1>
+        <a href="tip_details.html?tipId=1">Breastfeeding Tips</a>
+        <a href="tip_details.html?tipId=2">Sleep Tips for Baby and Mother</a>
+        <a href="tip_details.html?tipId=3">Diapering Tips</a>
+        <a href="tip_details.html?tipId=4">Baby’s Health and Hygiene</a>
+        <a href="tip_details.html?tipId=5">Bonding with Your Baby</a>
+        <a href="tip_details.html?tipId=6">Managing Feeding and Sleep Schedules</a>
+        <a href="tip_details.html?tipId=7">Self-Care for Mom</a>
+        <a href="tip_details.html?tipId=8">When to Call the Doctor</a>
+        <a href="tip_details.html?tipId=9">Developmental Milestones</a>
+        <a href="tip_details.html?tipId=10">Safety Tips</a>
+    </div>
+</body>
+</html>

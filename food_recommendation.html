@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recommendations - MaMa Mentor</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-y: auto;
+            font-family: 'PT Serif', serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0f7fa, #e1bee7); /* Soft blue-pink gradient */
+            color: #333; /* Set content font color to dark gray */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .recommendation-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-family: 'PT Serif', serif;
+            font-size: 3rem;
+            color: transparent;
+            background: linear-gradient(45deg, #ff66b2, #ffcc00); /* Baby pink to gold gradient */
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #e91e63; /* Pink accent */
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            padding: 10px;
+            background: #ffe6f0; /* Soft pink background for list items */
+            margin: 10px 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 1.2rem;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff66b2, #ffcc00); /* Baby pink to gold gradient */
+            border-radius: 30px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .recommendation-container {
+                width: 90%;
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            ul li {
+                font-size: 1rem;
+                padding: 8px;
+            }
+
+            a {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="recommendation-container">
+        <h1>Food Recommendations</h1>
+        
+        <h2>First Trimester</h2>
+        <ul>
+            <li><strong>Protein:</strong> Chicken, Eggs</li>
+            <li><strong>Fruits:</strong> Bananas, Oranges</li>
+            <li><strong>Veggies:</strong> Spinach, Carrots</li>
+        </ul>
+        
+        <h2>Second Trimester</h2>
+        <ul>
+            <li><strong>Protein:</strong> Fish, Tofu</li>
+            <li><strong>Fruits:</strong> Apples, Avocados</li>
+            <li><strong>Veggies:</strong> Broccoli, Sweet Potato</li>
+        </ul>
+
+        <h2>Third Trimester</h2>
+        <ul>
+            <li><strong>Protein:</strong> Lean Beef, Lentils</li>
+            <li><strong>Fruits:</strong> Mangoes, Pineapple</li>
+            <li><strong>Veggies:</strong> Kale, Bell Peppers</li>
+        </ul>
+
+        <a href="options.html">Go Back to Options</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options - MaMa Mentor</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'PT Serif', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0f7fa, #e1bee7); /* Soft blue to purple gradient */
+            color: #333; /* Dark gray text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow-y: auto; /* Allow scrolling if needed */
+        }
+
+        /* Main container for options */
+        .options-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 2x3 grid */
+            gap: 30px; /* Spacing between grid items */
+            max-width: 900px; /* Limit the container width */
+            padding: 20px;
+            background: #fff; /* White background for the container */
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            color: #000; /* Set content font color to black */
+        }
+
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            color: #e91e63; /* Vibrant pink for the heading */
+            margin-bottom: 30px;
+            text-align: center;
+            grid-column: span 3; /* Span the heading across the grid */
+            animation: fadeIn 1s ease-out;
+            font-weight: bold; /* Make the title bold */
+        }
+
+        /* Style for each option */
+        .options-container a {
+            font-size: 1.5rem;
+            font-weight: normal; /* Lighter font weight */
+            text-decoration: none;
+            height: 180px; /* Bigger box size */
+            border-radius: 20px; /* Rounded corners */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000; /* Black text for the options */
+            background-color: #333;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Updated vibrant color backgrounds for each option */
+        .option-1 {
+            background: linear-gradient(45deg, #ff99cc, #ffb3d9); /* Lighter pink gradient */
+        }
+
+        .option-2 {
+            background: linear-gradient(45deg, #ffc9b9, #ff99cc); /* Soft peach to pink gradient */
+        }
+
+        .option-3 {
+            background: linear-gradient(45deg, #ffccf2, #ffb6d3); /* Soft pink to lavender gradient */
+        }
+
+        .option-4 {
+            background: linear-gradient(45deg, #f8a7d4, #ff66a3); /* Light pink to deeper pink gradient */
+        }
+
+        .option-5 {
+            background: linear-gradient(45deg, #ffe6f0, #ff80a1); /* Very light pink to vibrant pink gradient */
+        }
+
+        .option-6 {
+            background: linear-gradient(45deg, #ffd1f1, #ff66b2); /* Light pink to strong magenta gradient */
+        }
+
+        /* Hover effect for options */
+        .options-container a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animation for fading in */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Smooth transition effect for the whole page */
+        .options-container a {
+            animation: popIn 0.5s ease-in-out;
+        }
+
+        /* Pop-in animation */
+        @keyframes popIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="options-container">
+        <h1>Choose an Option</h1>
+        <a href="food_recommendation.html" class="option-1">Food Recommendation</a>
+        <a href="trimester_calculator.html" class="option-2">Trimester Calculation</a>
+        <a href="exercise_recommendation.html" class="option-3">Exercise Recommendation</a>
+        <a href="checklist.html" class="option-4">New Parent Checklist</a>
+        <a href="calender.html" class="option-5">Calendar</a>
+        <a href="baby_tips.html" class="option-6">Baby Tips</a>
+    </div>   
+</body>
+</html>

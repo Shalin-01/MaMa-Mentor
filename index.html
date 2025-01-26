@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaMaMentor - Pregnancy Platform</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        /* General fade-in animation */
+        body {
+            animation: fadeIn 1.5s ease-in-out;
+            font-family: 'PT Serif', serif;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Title section with matching color scheme */
+        .title-section {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #ffb3d9, #ffd6e5); /* Lighter pink gradient */
+            color: #e91e63; /* Matching pink color for title text */
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .title-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #e91e63; /* Vibrant pink */
+            margin-bottom: 10px;
+        }
+
+        .title-section p {
+            font-family: 'PT Serif', serif;
+            color: #333; /* Darker gray text */
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Body section styling */
+        .body-section {
+            padding: 40px;
+            background: #ffffff;
+            color: #333; /* Dark gray text */
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #e91e63; /* Same pink as title section */
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        /* Gradient button */
+        .btn-grad {
+            display: inline-block;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 50px;
+            background: linear-gradient(to right, #ff99cc, #ffb3d9); /* Lighter pink gradient */
+            color: #fff; /* White text */
+            text-decoration: none;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .btn-grad:hover {
+            background: linear-gradient(to left, #ffb3d9, #ff99cc); /* Slightly darker on hover */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+        }
+
+        /* Logo styling */
+        header img {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 120px; /* Increased size of the logo */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f8f8;
+            color: #333;
+            font-size: 1rem;
+            border-top: 1px solid #e1bee7;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="title-section">
+        <img src="static/Logo.png" alt="MaMaMentor Logo">
+        <h1>MaMaMentor</h1>
+        <p>Your trusted platform for a safe, informed, and supported pregnancy journey.</p>
+        <p>
+            <a href="login.html" class="btn-grad">Login</a>
+        </p>
+    </header>
+
+    <section class="body-section">
+        <h2>About Us</h2>
+        <p>MaMaMentor is designed to offer comprehensive tools, emotional support, and expert advice for pregnant women. Join us today for a safe and informed pregnancy experience!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MaMaMentor. All rights reserved.</p>
+        <p>Need help? Contact support@mama-mentor.com</p>
+    </footer>
+</body>
+</html>

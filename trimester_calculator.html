@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trimester Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'PT Serif', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #e0f7fa, #e1bee7); /* Soft blue-pink gradient */
+            color: #333;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        /* Main Container */
+        .container {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 600px; /* Increased width */
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Title Styling */
+        .container h1 {
+            font-size: 2.5rem;
+            color: #e91e63; /* Pink accent */
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Label Styling */
+        .container label {
+            font-size: 1.2rem;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Input Styling */
+        .container input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        /* Button Styling */
+        .container button {
+            background: linear-gradient(45deg, #ff66b2, #ffcc00); /* Baby pink and gold gradient */
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        .container button:hover {
+            background: linear-gradient(45deg, #ffcc00, #ff66b2); /* Reverse gradient on hover */
+            transform: translateY(-5px);
+        }
+
+        .container button:active {
+            transform: translateY(0);
+        }
+
+        /* Result Styling */
+        .result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Trimester Calculator</h1>
+        <label for="weeks">Enter how many weeks pregnant you are:</label>
+        <input type="number" id="weeks" placeholder="Enter weeks (e.g., 10)">
+        <button onclick="calculateTrimester()">Check Trimester</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function calculateTrimester() {
+            const weeks = parseInt(document.getElementById('weeks').value);
+            const resultDiv = document.getElementById('result');
+
+            if (isNaN(weeks) || weeks <= 0) {
+                resultDiv.textContent = "Please enter a valid number of weeks.";
+                resultDiv.style.color = "red";
+                return;
+            }
+
+            if (weeks >= 1 && weeks <= 12) {
+                resultDiv.textContent = "You are in your First Trimester.";
+                resultDiv.style.color = "#4caf50";
+            } else if (weeks >= 13 && weeks <= 26) {
+                resultDiv.textContent = "You are in your Second Trimester.";
+                resultDiv.style.color = "#4caf50";
+            } else if (weeks >= 27 && weeks <= 40) {
+                resultDiv.textContent = "You are in your Third Trimester.";
+                resultDiv.style.color = "#4caf50";
+            } else {
+                resultDiv.textContent = "Please enter a number of weeks between 1 and 40.";
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

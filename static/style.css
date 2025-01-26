@@ -1,0 +1,195 @@
+/* General Body Styling */
+body {
+    font-family: 'PT Serif', serif; /* PT Serif for content */
+    background: linear-gradient(to right, #ffe6ef, #ffccd9); /* Soft pink gradient */
+    margin: 0;
+    padding: 0;
+    color: #000000; /* Black font color */
+    line-height: 1.8;
+}
+
+/* Buttons */
+.btn-grad {
+    display: inline-block;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px;
+    background: linear-gradient(to right, #ffccd9, #ffe6ef);
+    color: #000000; /* Black font color */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-grad:hover {
+    background: linear-gradient(to left, #ffccd9, #ffe6ef);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #ffe6ef, #ffccd9); /* Soft gradient */
+    color: #000000; /* Black font color */
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 3px solid #ffb3c6;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: 'Lora', serif; /* Serif font for headings */
+    color: #000000; /* Black font color */
+}
+
+/* Section Styling */
+section {
+    margin: 40px auto;
+    padding: 25px;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    font-family: 'PT Serif', serif; /* PT Serif for content */
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-10px);
+}
+
+/* Flash Messages */
+ul {
+    color: #ffccd9;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+ul li {
+    margin: 12px 0;
+    padding: 18px;
+    background: #fff4f8;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+label {
+    margin-top: 20px;
+    color: #ffb3c6;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+input, textarea {
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #ffccd9;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #000000; /* Black font color */
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #ffccd9;
+    box-shadow: 0 0 8px rgba(255, 204, 217, 0.5);
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(to right, #ffccd9, #ffe6ef);
+    color: #000000; /* Black font color */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ffe6ef, #ffccd9);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    background: linear-gradient(to right, #ffe6ef, #ffccd9);
+    color: #000000; /* Black font color */
+    padding: 25px;
+    border-top: 3px solid #ffb3c6;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Additional Colorful Styles */
+a {
+    color: #ffb3c6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffccd9;
+}
+
+/* Gradient Effects on hover */
+.options-container a {
+    padding: 15px;
+    margin: 5px 0;
+    background: linear-gradient(to right, #ffccd9, #ffe6ef);
+    border-radius: 25px;
+    color: #000000; /* Black font color */
+    text-align: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.options-container a:hover {
+    background: linear-gradient(to right, #ffe6ef, #ffccd9);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}

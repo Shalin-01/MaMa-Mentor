@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Essentials Checklist</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'PT Serif', serif;
+            background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+
+        /* Main Container */
+        .container {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 900px;
+            padding: 40px;
+            text-align: left;
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: 2.5rem;
+            color: #e91e63;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Section Titles */
+        h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 20px 0 10px;
+            border-bottom: 2px solid #e91e63;
+            padding-bottom: 5px;
+        }
+
+        /* Checklist Items */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        ul li input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.5);
+            accent-color: #e91e63;
+        }
+
+        /* Buttons */
+        button {
+            display: block;
+            margin: 30px auto 0;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            background: linear-gradient(135deg, #ff9800, #ff5722);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #ff5722, #ff9800);
+            transform: translateY(-5px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+    </style>
+    <!-- Google Fonts for PT Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Baby Essentials Checklist</h1>
+        <h2>Clothing</h2>
+        <ul>
+            <li><input type="checkbox"> Onesies or bodysuits</li>
+            <li><input type="checkbox"> Sleepers or pajamas</li>
+            <li><input type="checkbox"> Socks and mittens</li>
+            <li><input type="checkbox"> Hats (warm and lightweight)</li>
+            <li><input type="checkbox"> Swaddle blankets</li>
+        </ul>
+
+        <h2>Feeding</h2>
+        <ul>
+            <li><input type="checkbox"> Bottles and nipples</li>
+            <li><input type="checkbox"> Breast pump</li>
+            <li><input type="checkbox"> Formula (if needed)</li>
+            <li><input type="checkbox"> Burp cloths</li>
+            <li><input type="checkbox"> Bibs</li>
+            <li><input type="checkbox"> Nursing pillow</li>
+        </ul>
+
+        <h2>Diapering</h2>
+        <ul>
+            <li><input type="checkbox"> Diapers (disposable or cloth)</li>
+            <li><input type="checkbox"> Baby wipes</li>
+            <li><input type="checkbox"> Diaper rash cream</li>
+            <li><input type="checkbox"> Changing pad</li>
+            <li><input type="checkbox"> Diaper bag</li>
+        </ul>
+
+        <h2>Sleeping</h2>
+        <ul>
+            <li><input type="checkbox"> Crib or bassinet</li>
+            <li><input type="checkbox"> Mattress and fitted sheets</li>
+            <li><input type="checkbox"> Baby monitor</li>
+            <li><input type="checkbox"> Nightlight</li>
+        </ul>
+
+        <h2>Bathing</h2>
+        <ul>
+            <li><input type="checkbox"> Baby bathtub</li>
+            <li><input type="checkbox"> Baby shampoo and body wash</li>
+            <li><input type="checkbox"> Hooded towels</li>
+            <li><input type="checkbox"> Washcloths</li>
+        </ul>
+
+        <h2>Health & Safety</h2>
+        <ul>
+            <li><input type="checkbox"> Infant first aid kit</li>
+            <li><input type="checkbox"> Thermometer</li>
+            <li><input type="checkbox"> Nail clippers or file</li>
+            <li><input type="checkbox"> Nasal aspirator</li>
+        </ul>
+
+        <h2>Travel</h2>
+        <ul>
+            <li><input type="checkbox"> Car seat</li>
+            <li><input type="checkbox"> Stroller</li>
+            <li><input type="checkbox"> Baby carrier or wrap</li>
+        </ul>
+
+        <button onclick="alert('Great job! You’re all set!')">Complete Checklist</button>
+    </div>
+</body>
+</html>
