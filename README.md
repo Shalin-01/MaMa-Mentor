@@ -48,38 +48,28 @@ npm
 For Software:
 
 # Screenshots 
+- login page
 <img width="959" alt="LoginPage" src="https://github.com/user-attachments/assets/202aacae-a54e-443f-94db-f384e6367640" />
-login page
 
 
+- options page
 <img width="959" alt="OptionsPage" src="https://github.com/user-attachments/assets/01caef6d-959f-494e-b2d0-9802082d8283" />
-options page
 
 
+- checklist page
 <img width="959" alt="ChecklistPage" src="https://github.com/user-attachments/assets/873da398-acb8-40bb-8b65-1dfa6567aa75" />
-checklist page
+
 
 # Diagrams
 ![WhatsApp Image 2025-01-26 at 11 03 34](https://github.com/user-attachments/assets/6d350623-2b4d-4523-ab23-d8db054e558d)
 
 workflow of MaMa Mentor
 
-For Hardware:
-
-# Schematic & Circuit
-nil
-
-nil
 
 # Build Photos
 ![WhatsApp Image 2025-01-26 at 11 30 48](https://github.com/user-attachments/assets/3dfaa37f-21bd-40f0-a688-e52d27fcbc18)
 
 
-
-nil
-List out all components shown
-
-nil
 Explain the build steps
 
 1.Set Up the Frontend Framework
