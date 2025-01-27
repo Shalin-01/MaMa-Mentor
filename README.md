@@ -25,9 +25,9 @@ MaMa Mentor is a user-friendly web application designed to support pregnant wome
 ## Technical Details
 ### Technologies/Components Used
 For Software:
--HTML
-CSS
-JavaScript
+- HTML
+- CSS
+- JavaScript
 - Bootstrap
 - jQuery
 - FontAwesome
@@ -47,7 +47,7 @@ npm
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
+# Screenshots 
 <img width="959" alt="LoginPage" src="https://github.com/user-attachments/assets/202aacae-a54e-443f-94db-f384e6367640" />
 login page
 
