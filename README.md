@@ -36,13 +36,6 @@ For Software:
 
 For Hardware:
 - Nil
-### Implementation
-For Software:
-# Installation
-npm
-
-# Run
-[commands]
 
 ### Project Documentation
 For Software:
@@ -70,7 +63,6 @@ workflow of MaMa Mentor
 ![WhatsApp Image 2025-01-26 at 11 30 48](https://github.com/user-attachments/assets/3dfaa37f-21bd-40f0-a688-e52d27fcbc18)
 
 
-Explain the build steps
 
 1.Set Up the Frontend Framework
 2.Install Dependencies
@@ -80,12 +72,9 @@ Explain the build steps
 6.Add JavaScript for Interactivity
 7.Test and Optimize
 
-![Final](Add photo of final product here)
-Explain the final build
 
 ### Project Demo
 # Video
-
 
 
 The demo shows the working of MaMa Mentor
